@@ -1,0 +1,102 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #B29BCF;
+}
+.resultContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  top: 80px;
+  z-index: 2;
+}
+.resultText {
+  white-space: pre-line;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 77px;
+  text-align: center;
+  color: #27094E;
+  text-transform: uppercase;
+}
+.resultText:nth-child(1) {
+  margin-bottom: 64px;
+}
+.linesLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.linesRight {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.contentContainer {
+  position: relative;
+  top: 54px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.question {
+  min-height: 96px;
+  font-weight: 400;
+  max-width: 1200px;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #27094E;  
+}
+
+.picture {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.buttonContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 130px;
+  grid-row-gap: 30px; 
+}
+
+.button {
+  font-family: 'Inter', sans-serif;
+  border-radius: 90px;
+  padding: 7px 0;
+  background-color: #451582;
+  font-size: 34px;
+  line-height: 48px;
+  text-align: center;
+  font-weight: 400;
+  border: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.linkButton {
+  font-family: 'Inter', sans-serif;
+  border-radius: 90px;
+  padding: 20px 0;
+  background-color: #451582;
+  font-size: 27px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: 400;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 400px;
+  position: absolute;
+  bottom: 20%;
+}

@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #B29BCF;
+}
+
+.lines {
+  width: 100vw;
+  position: absolute; 
+  top: 150px;
+}
+.logo {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 564px;
+  aspect-ratio: 1/1;
+  translate: -50% -50%;
+}
+
+.title {
+  width: 811px;
+  position: absolute;
+  top: 43px;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 64px;
+  line-height: 77px;
+  white-space: pre-line;
+  color: #27094E;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mainButton {
+  position: absolute;
+  bottom: 17px;
+  left: 50%;
+  translate: -50% 0;
+  width: 461px;
+  border-radius: 90px;
+  padding: 7px 0;
+  background-color: #451582;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  font-weight: 400;
+}
