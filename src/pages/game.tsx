@@ -6,9 +6,11 @@ import Image from 'next/image';
 import { useState } from 'react';
 import questions from '@/../public/questions.json';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { GameContent } from '@/components/game-content';
+
 const Game = () => {
   const router = useRouter()
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [activeQuestion, setActiveQuestion] = useState(0)
   const [isPreviewResult, setIsPreviewResult] = useState(false)
   const [correctAnswers, setCorrectAnswers] = useState(0)
@@ -52,15 +54,12 @@ const Game = () => {
               </button>
             </>
           ) : (
-            <div className={styles.contentContainer}>
-          <p className={styles.question}>{questions[activeQuestion].title}</p>
-          <Image src={questions[activeQuestion].src} alt="" width={790} height={490} className={styles.picture} />
-          <div className={styles.buttonContainer}>
-            {questions[activeQuestion].answers.map(({title, value}, index) => (
-              <button className={styles.button} key={index} onClick={() => handleAnswerClick(value)}>{title}</button>
-            ))}
-          </div>
-        </div>
+            <GameContent
+              title={questions[activeQuestion].title}
+              image={questions[activeQuestion].src}
+              answers={questions[activeQuestion].answers}
+              handleAnswerClick={handleAnswerClick}
+            />
           )
         }
         
