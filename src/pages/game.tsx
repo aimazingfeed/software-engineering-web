@@ -2,15 +2,11 @@
 
 import styles from '@/styles/Game.module.css'
 import Head from 'next/head';
-import Image from 'next/image';
 import { useState } from 'react';
 import questions from '@/../public/questions.json';
-import { useRouter } from 'next/router';
 import { GameContent } from '@/components/game-content';
 
 const Game = () => {
-  const router = useRouter()
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [activeQuestion, setActiveQuestion] = useState(0)
   const [isPreviewResult, setIsPreviewResult] = useState(false)
   const [correctAnswers, setCorrectAnswers] = useState(0)
